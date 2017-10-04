@@ -36,3 +36,8 @@ do
   fi
 done
 ```
+Output your plan file
+
+```
+terraform plan -out base`date +'%s'`.plan
+```
