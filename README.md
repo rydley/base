@@ -13,14 +13,14 @@ MIT
 
 ## Best Practices
 
-The state file contains everything in your configuration, including any secrets.  Add this file to your .gitignore configuration.
+The state file contains everything in your configuration, including any secrets.  Add this file to your `.gitignore` configuration.
 
 ```
 $ echo "terraform.tfstate*" > > .gitignore 
 $ git add .gitignore 
 $ git commit -m "Adding .gitignore file"
 ```
-Pre-commit hooks
+### Pre-commit hooks
 ```
 #!/usr/bin/env bash
 set -e
@@ -36,7 +36,7 @@ do
   fi
 done
 ```
-Output your plan file
+### Output your plan file
 
 ```
 $ terraform plan -out base`date +'%s'`.plan
